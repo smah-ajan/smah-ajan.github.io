@@ -16,7 +16,7 @@ var Enemy = function(position) {
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
 
-    this.x = this.x + this.speed * 8 * dt;
+    this.x = this.x + this.speed * 25 * dt;
 
     if (this.x > 505) {
         this.x = 0;
@@ -32,7 +32,7 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 Enemy.prototype.reset = function() {
-    this.x = 0;
+    this.x = 20;
     this.y = this.y;
     
 };
